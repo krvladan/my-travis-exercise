@@ -15,7 +15,7 @@ before_script:
 
 script:
   - docker --version
-  - docker build -t simple-node-exercise .
+  - docker build -t simple-node-exercise --build-arg FAVORITE_FOOD=${FAVORITE_FOOD} .
   - docker tag simple-node-exercise vlkrst/simple-node-exercise:latest
 
 after_success:
