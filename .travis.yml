@@ -8,7 +8,7 @@ services:
 script:
   - docker --version
   - docker build -t simple-node-exercise .
-  - docker tag simple-node vlkrst/simple-node-exercise:latest
+  - docker tag simple-node-exercise vlkrst/simple-node-exercise:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
